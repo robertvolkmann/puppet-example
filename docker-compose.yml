@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  puppet:
+    container_name: puppet
+    hostname: puppet
+    image: puppet/puppetserver-standalone
+    ports:
+      - 8140
+    volumes:
+      - ./code:/etc/puppetlabs/code/
